@@ -81,5 +81,5 @@ optimizer = Adam(learning_rate=0.0001)
 early_stopping = EarlyStopping(patience=5, min_delta=0.001, monitor="val_acc", mode="max", verbose=2)
 model.compile(loss="categorical_crossentropy", metrics=["accuracy"], optimizer=optimizer)
 history = model.fit(train_batches, epochs=5, callbacks=[early_stopping], shuffle=True, validation_data=val_batches, steps_per_epoch=500, validation_steps=10, verbose=2)
-
+history.save("new69.h5")
 
